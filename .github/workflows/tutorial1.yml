@@ -6,21 +6,27 @@ jobs:
        runs-on: ubuntu-latest
        steps:
        - name: step1
-         run: echo "Hello from job1"
+         run: |
+            echo "hello fromjob1"
+            echo "Today's Date is $(date)"
 
   job2:
        name: job2
        runs-on: windows-latest
        steps:
        - name: step2
-         run: echo "hello from job2"
+         run: | 
+            echo "hello from job2"
+            echo "Today's date is $(date)"
 
   job3:
        name: job3
        runs-on: ubuntu-latest
        steps:
        - name: step3
-         run: echo "hello from job3"
+         run: |
+           echo "hello from job3"
+           echo "Today's date is $(date)"
 
          
   job4:
@@ -29,4 +35,6 @@ jobs:
        runs-on: ubuntu-latest
        steps:
        - name: step4
-         run: echo "This runs after job1 and job2"
+         run: |
+          echo "I am job4"
+          echo "Todays date is $(date)"
