@@ -1,3 +1,6 @@
+name: tutorial1
+on: push
+
 jobs:
   job1:
     name: job1
@@ -7,10 +10,9 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
-      -name:check version of python
-       run:python --version   
+      - name: Check version of Python
+        run: python --version
 
-      
   job2:
     name: job2
     runs-on: ubuntu-latest
@@ -19,10 +21,9 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
-      -name:check version of python
-      run:python --version  
+      - name: Check version of Python
+        run: python --version
 
-    
   job3:
     name: job3
     runs-on: ubuntu-latest
@@ -31,8 +32,8 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
-        -name:check version of python
-         run:python --version  
+      - name: Check version of Python
+        run: python --version
 
   job4:
     name: job4
@@ -43,5 +44,5 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
-        -name:check version of python
-         run:python --version  
+      - name: Check version of Python
+        run: python --version
