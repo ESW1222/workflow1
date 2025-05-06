@@ -1,0 +1,38 @@
+name: Challange1
+
+on:
+  workflow_dispatch:
+
+jobs:
+  job1:
+    name: Job 1 - Environment Info
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup
+        run: |
+          echo "Printing current date:"
+          date
+          echo "Printing working directory:"
+          pwd
+          echo "Listing contents of the directory:"
+          ls -la
+
+  job2:
+    name: Job 2 - Python Artifact Creation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Check Python Version
+        run: python --version
+
+      - name: Set up Pandas
+        run: pip install pandas
+
+      - name: Create Artifact
+        run: |
+          echo "# This is my python artifact" > artifact.py
+          python artifact.py
