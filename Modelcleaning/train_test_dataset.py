@@ -17,7 +17,8 @@ csv_file_path = os.path.join(model_cleaning_dir, 'data.csv')
 if os.path.exists(csv_file_path):
     print(f"File found: {csv_file_path}")
 else:
-    print(f"File not found at: {/workspaces/workflow1/Modelcleaning/data.csv}")
+  print(f"File not found at: {csv_file_path}")
+
 
 # Read the cleaned data CSV file
 df = read_csv(csv_file_path)
