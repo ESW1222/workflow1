@@ -6,12 +6,12 @@ from sklearn.model_selection import train_test_split
 
 workspace = os.getenv('GITHUB_WORKSPACE')
 
-# Define the directory where your Python script is located (ModelCleaning)
-model_cleaning_dir = os.path.join(workspace, 'ModelCleaning')
+# Define the directory where your Python script is located (Modelcleaning)
+model_cleaning_dir = os.path.join(workspace, 'Modelcleaning')
 
 
 # Define the full path to the cleaned data CSV file
-csv_file_path = os.path.join(model_cleaning_dir, 'cleaned_data.csv')
+csv_file_path = os.path.join(model_cleaning_dir, 'cleandata.csv')
 
 # Check if the file exists (for debugging)
 if os.path.exists(csv_file_path):

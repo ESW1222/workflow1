@@ -25,11 +25,11 @@ df.drop_duplicates(inplace=True)
 
 workspace = os.getenv('GITHUB_WORKSPACE')
 
-# Define the directory where your Python script is located (ModelCleaning)
-model_cleaning_dir = os.path.join(workspace, 'ModelCleaning')
+# Define the directory where your Python script is located (Modelcleaning)
+model_cleaning_dir = os.path.join(workspace, 'Modelcleaning')
 
 # Define the full path for the output file
-output_path = os.path.join(model_cleaning_dir, 'cleaned_data.csv')
+output_path = os.path.join(model_cleaning_dir, 'data.csv')
 
 # Create the directory if it doesn't exist
 os.makedirs(model_cleaning_dir, exist_ok=True)
@@ -41,4 +41,4 @@ print(output_path)
 print("Cleaned Data:")
 print(df.head())
 
-print("\nCleaned data saved to 'cleaned_data.csv'")
+print("\nCleaned data saved to 'cleandata.csv'")

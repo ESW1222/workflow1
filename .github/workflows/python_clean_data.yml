@@ -14,7 +14,7 @@ jobs:
           pwd
           ls -al
           pwd
-          cd ModelCleaning
+          cd Modelcleaning
           pip install pandas
           python cleandata.py
           ls -al
@@ -22,4 +22,4 @@ jobs:
       - name: train_test_dataset
         run: |
           pip install scikit-learn joblib
-          python ModelCleaning/train_test_dataset.py
+          python Modelcleaning/train_test_dataset.py   
